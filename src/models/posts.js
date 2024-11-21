@@ -7,3 +7,7 @@ const collection = db.collection("posts");
 export const findAllPosts = async () => {
   return collection.find().toArray();
 };
+
+export const createPost = async (post) => {
+  return collection.insertOne(post);
+};
